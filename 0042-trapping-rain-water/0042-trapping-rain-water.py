@@ -18,7 +18,10 @@ class Solution:
         
         for i in range(1,len(height)): 
             mincurr = min(leftmax[i],rightmax[i])
-            totalWater += max(mincurr - height[i], 0)
+            if (mincurr - height[i] >= 0):
+    
+                # print(f"{dick}  {rightmax[i]}  {leftmax[i]}")
+                totalWater +=  mincurr - height[i]
             
         return totalWater
         
