@@ -14,9 +14,9 @@ class Solution:
             
             fruitdict[fruits[j]] += 1 # should keep track of num of fruits
             
-         
-
             
+
+            # could be invalid here, our window could be invalid
             
             while len(fruitdict) > 2 :
                 
@@ -26,6 +26,9 @@ class Solution:
                     fruitdict.pop(fruits[i])
                     
                 i += 1
+                
+                
+            # must be a fixed window
             currcount = j - i + 1
             
             maximumfruits = max(currcount,maximumfruits)
